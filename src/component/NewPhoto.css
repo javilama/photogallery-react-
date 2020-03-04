@@ -1,0 +1,10 @@
+div.card{
+    width: 18rem;
+}
+textarea{
+    border-color:#4F0A4F !important
+ }
+textarea.form-control:focus{
+box-shadow: 0 0 0 0.2rem rgba(132, 9, 132, 0.5)!important;
+    border-color: #840984 !important
+}
