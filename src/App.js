@@ -15,7 +15,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 const App= () => (
     < BrowserRouter>
       <Switch>
-        {/* <Route path="*" component={Form} /> */}
+        <Route path="/" component={Form}/>
         <Route path="/Form" component={Form}/>
         <Route path="/ViewPhotos" component={ViewPhotos} />
         <Route path="/NewPhoto" component={NewPhoto} />
