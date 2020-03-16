@@ -16,10 +16,10 @@ class ViewPhotos extends Component {
       }
       
       async componentDidMount(){
-          await this.fetchViewPhotos()
+          await this.getPhotos()
       }
 
-      fetchViewPhotos = async ( )=> {
+      getPhotos= async ( )=> {
         let res = await fetch ('http://localhost:3000/photo/')
         let photos = await res.json()
         let data = [];
