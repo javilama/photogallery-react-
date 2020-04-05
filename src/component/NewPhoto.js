@@ -31,11 +31,11 @@ class NewPhoto extends Component {
                         <div className="col-12 col-md-4 mx-4 border-left align-self-center">
                             <form>
                                 <div className="form-group">
-                                    <label for="exampleInputEmail1"><h5>Title</h5></label>
+                                    <label htmlFor="title"><h5>Title</h5></label>
                                     <input type="text" className="form-control" id="exampleInputEmail1" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputPassword1"> <h5> Description</h5></label>
+                                    <label htmlFor="detail"> <h5> Detail</h5></label>
                                     <textarea type="text" className="form-control" id="exampleInputText" />
                                 </div>
 

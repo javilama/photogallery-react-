@@ -4,17 +4,41 @@ import Circulos from '../assets/img/circulosVector.svg'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
+
+const URL = 'http://localhost:3000/photo';
 class Form extends Component {
     state = { }
-handleSubmit = e => {
+handleSubmit = async (e) => {
 e.preventDefault ()
 console.log(this.state)
+try {
+    let formData = new FormData();
+    let name = this.state.title
+    let detail = this.state.detail
+    let img = document.querySelector("input[type='file']");
+    formData.append('name',name);
+    formData.append('detail',detail);
+    formData.append('img',img.files[0]);
+    let config = {
+        method: 'POST',
+        body: formData 
+    }
+    console.log(formData);
+    let res = await fetch(URL, config)
+    let json = await res.json()
+    console.log(json);
+}catch {
+
 }
 
-    handleChange = e=> {
+}
+
+
+    handleChange = (e) => {
              this.setState({
                  [e.target.name]: e.target.value
              })
+             console.log(e.target.value)
     }
     render() {
         return (
@@ -32,24 +56,24 @@ console.log(this.state)
                         <div className="col-12 col-md-4 mt-5 pt-5 ">
                             <form onSubmit = {this.handleSubmit}  >
                                 <div className="form-group">
-                                    <label htmlFor="exampleInputEmail1"  ><h5>Title</h5></label>
+                                    <label htmlFor="title" >Title</label>
                                     <input type="text" className="form-control"  name="title" 
                                      onChange={this.handleChange}
-                                     value={this.state.title} />
+                                     value={this.state.value} />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="exampleInputPassword1" ><h5> Description </h5> </label>
-                                    <textarea type="text" className="form-control" name="description" 
+                                    <label htmlFor="description" >Description </label>
+                                    <textarea type="text" className="form-control" name="detail" 
                                     onChange={this.handleChange}
-                                    value={this.state.description} />
+                                    value={this.state.value} />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="exampleInputPassword1" > <h5>Photo</h5></label>
-                                    <input type="text" className="form-control" name="img" 
+                                    <label htmlFor="img" >Photo</label>
+                                    <input type="file" className="form-control" name="img" 
                                     onChange={this.handleChange}
-                                    value={this.state.img} />
+                                    value={this.state.value} />
                                 </div>
-                                <button type="submit" className="btn btn-primary pt-2 float-right  "><h5>Add</h5></button>
+                                <button type="submit" className="btn btn-primary pt-2 float-right  ">Add</button>
                             </form>
                         </div>
 

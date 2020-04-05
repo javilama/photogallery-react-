@@ -5,6 +5,7 @@ import ShowImages from './ShowImages'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
+const URL = 'http://localhost:3000/photo/'
 class ViewPhotos extends Component {
    
     constructor(props) {
@@ -20,7 +21,7 @@ class ViewPhotos extends Component {
       }
 
       getPhotos= async ( )=> {
-        let res = await fetch ('http://localhost:3000/photo/')
+        let res = await fetch (URL)
         let photos = await res.json()
         let data = [];
         for ( let item of photos.photos){

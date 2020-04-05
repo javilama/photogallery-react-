@@ -6,17 +6,26 @@ import '../component/Card.css'
 
 class Card extends Component {
     // constructor (){
-       
-    //     super()
+    //        super()
+
+    //    this.state = {
+    //        check: true
+    //    }    
     // }
+    handleCheck = () =>{
+        console.log("checked");
+    }
+    
     render() {
         return (
             <div className="container pt-5 mt-5 ">
                 <div className="row"  >
                     <div className="col col-md-6 " >  
                     <div className="card">
-                        <img src={this.props.img} className="card-img-top" alt="..." />
-                        <input type="checkbox" className="mx-2 my-2 " / >
+                        <img src={this.props.img} className="card-img card-img-top img-tubnail " alt="..." />
+                        <input type="checkbox"  
+                         onChange = {this.handleCheck}  
+                         className="mx-2 my-2 " / >
                         <div className="card-body">
                             <h5 className="card-title">{this.props.title}</h5>
                             <p className="card-text">{this.props.description}</p>
