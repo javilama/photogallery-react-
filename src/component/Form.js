@@ -23,10 +23,12 @@ try {
         method: 'POST',
         body: formData 
     }
-    console.log(formData);
     let res = await fetch(URL, config)
     let json = await res.json()
-    console.log(json);
+    console.log(json.ok);
+   if(json.ok){
+       alert('Successfull!!')
+   }
 }catch {
 
 }

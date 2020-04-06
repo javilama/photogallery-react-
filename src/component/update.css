@@ -1,0 +1,21 @@
+ select{
+     color: #840984 !important;
+     border-color: #840984 !important;
+     border: none
+ }
+ select{
+    border-color: #840984 !important;
+    
+ }
+ select:focus{
+    outline: none
+ }
+ select:option:focus{
+     background: #840984 !important;
+ }
+ /* option{
+     color : #840984 !important;
+   
+     
+ } */
+ 

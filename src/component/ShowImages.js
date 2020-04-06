@@ -20,6 +20,7 @@ const ShowImages = ({Showimage})=> (
                 description = {detail}
                 img = {'http://localhost:3000/photo/'+img} 
                 date = {date}
+                id = {_id}
                 />
               </div>
               
