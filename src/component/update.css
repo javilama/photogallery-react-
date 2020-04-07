@@ -18,4 +18,25 @@
    
      
  } */
+ /* img.image{
+
+    height: 18px;
+    width: 18px;
+ } */
+ button.btn-outline-secondary{
+     border-color:#840984 !important;
+ }    
+ button.btn-img-delete:hover{ 
+    background-color: red !important;
+} 
+button.btn-img-update:hover{ 
+    background-color: #e035e0 !important;
+} 
+button.btn-outline-secondary:focus{
+    border-color:#840984 !important;
+} 
+button.btn-img{
+    background-image: url('../assets/img/delete.png') !important;
+ }
+
  
