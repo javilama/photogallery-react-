@@ -16,6 +16,7 @@ const App= () => (
 
     < Router>
       <Switch>
+        <Route exact path= "/" component={ViewPhotos}/>
         <Route path="/ViewPhotos" component={ViewPhotos} />
         <Route path="/NewPhoto" component={NewPhoto} />
         <Route exact path="/Form" component={Form}/>

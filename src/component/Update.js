@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../component/update.css'
-import iconUpdate from '../assets/img/update.png'
-import iconDelete from '../assets/img/delete.png'
+// import iconUpdate from '../assets/img/update.png'
+// import iconDelete from '../assets/img/delete.png'
 
 
 
